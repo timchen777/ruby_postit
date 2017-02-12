@@ -1,8 +1,24 @@
 Rails.application.routes.draw do
+  
+  # get 'pages/contact'
+  get "contact", to: "pages#contact"
+  get "error", to: "pages#error"
+  
+  get "ref", to: redirect("http://railscasts.com")
+  # get 'pages/about'
+  get "about", to: "pages#about"
+
+
   resources :comments
   resources :connections
   resources :categories
   resources :posts
+
+  # get 'pages/home'
+  root 'pages#home'
+
+  get "*path", to: redirect("/error")
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

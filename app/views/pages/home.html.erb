@@ -1,0 +1,14 @@
+<h1>Home</h1>
+<hr>
+<h2>Post</h2>
+<% @posts.each do |post| %>
+  <p><%= post.title %><%=" : "%><%= post.content %></p>
+<% end %>
+<h2>Category</h2>
+<% @categories.each do |category| %>
+  <p><%= category.title %></p>
+<% end %>
+<h2>Comment</h2>
+<% @comments.each do |comment| %>
+  <p><%= comment.content %></p>
+<% end %>
