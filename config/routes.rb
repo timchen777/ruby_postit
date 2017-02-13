@@ -13,10 +13,15 @@ Rails.application.routes.draw do
   resources :connections
   resources :categories
   resources :posts
-
+  resources :users, only: [:new, :create]
+  
   # get 'pages/home'
   root 'pages#home'
-
+  get '/register', to: 'users#new'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+  
   get "*path", to: redirect("/error")
   
   # The priority is based upon order of creation: first created -> highest priority.
