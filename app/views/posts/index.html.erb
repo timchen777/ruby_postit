@@ -25,11 +25,9 @@
     <% end %>
   </tbody>
 </table>
-<div align="center">
+<div>
   <%= will_paginate %>
 </div>  
-
-<br>
 <% if logged_in? %>
 <%= link_to 'New Post', new_post_path, class: "btn btn-success" %>
 <% end %>
