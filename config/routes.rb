@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :post1s
   # get 'pages/contact'
   get "contact", to: "pages#contact"
   get "error", to: "pages#error"
