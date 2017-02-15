@@ -5,5 +5,15 @@
   <%= @category.title %>
 </p>
 
+<!-----Tim Apply catagory to post-->
+<% @cat_posts.each do |post| %>
+  <h6><%= link_to post.title, post %></h6>
+  <p><%= link_to post.content, post %></p>
+<% end %>
+<% @cat_post1s.each do |post1| %>
+  <h6><%= link_to post1.title, post1 %></h6>
+  <p><%= link_to post1.content, post1 %></p>
+<% end %>
+
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

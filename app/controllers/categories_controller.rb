@@ -11,6 +11,11 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    #------ Tim: add following 3 lines to apply categories to posts
+    @cat = Category.find(params[:id])
+    @cat_title= @cat.title
+    @cat_posts = @cat.posts
+    @cat_post1s = @cat.post1s
   end
 
   # GET /categories/new

@@ -9,16 +9,17 @@
   <strong>Content:</strong>
   <%= @post1.content %>
 </p>
-
 <p>
   <strong>Category:</strong>
   <%= @post1.category_id %>
 </p>
-
 <p>
   <strong>User:</strong>
   <%= @post1.user_id %>
 </p>
+<small>Created at: <%= @post1.created_at.strftime("%b %d. %Y") %></small><br>
+<small>category: <%= @post1.category.title %></small>
+<hr>
 
 <%= link_to 'Edit', edit_post1_path(@post1) %> |
 <%= link_to 'Back', post1s_path %>

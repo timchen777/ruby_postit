@@ -25,9 +25,11 @@
             <!--<li><a href="#">Action</a></li>-->
             <!--<li><a href="#">Another action</a></li>-->
             <!--<li><a href="#">Something else here</a></li>-->
-            <li><%= link_to  "Post", posts_path %></li>
             <li><%= link_to  "Category", categories_path %></li>
-            <li><%= link_to  "Comment", comments_path %></li>            
+            <li><%= link_to  "Post", posts_path %></li>
+            <li><%= link_to  "Connection", connections_path %></li>
+            <li><%= link_to  "Comment", comments_path %></li>         
+            <li><%= link_to  "Post1", post1s_path %></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li role="separator" class="divider"></li>
@@ -35,6 +37,8 @@
           </ul>
         </li>
       </ul>
+     <% if logged_in? %>   
+     <% if current_user.name == "admin" %>
       <form class="navbar-form navbar-left">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
@@ -45,16 +49,18 @@
         <!--<li><a href="#">Link</a></li>-->
         <li><%= link_to  "Reference", ref_path %></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="#">users</a></li>
+            <li><a href="#">categories</a></li>
+            <li><a href="#">posts</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
       </ul>
+      <% end %>
+      <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
