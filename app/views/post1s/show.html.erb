@@ -19,6 +19,15 @@
 </p>
 <small>Created at: <%= @post1.created_at.strftime("%b %d. %Y") %></small><br>
 <small>category: <%= @post1.category.title %></small>
+
+<!-----Tim Apply post to comment-->
+<!--% if logged_in? %-->
+  <!--% @pst1_comments.each do |comment| %-->
+    <!--p><!--%= current_user.name %><!--%= ":" %><!--%= link_to comment.content, comment %></p-->
+    <!--p>------------</p-->
+  <!--% end %-->
+
+<%= link_to 'New Comment', new_comment_path(@post1) %>
 <hr>
 
 <%= link_to 'Edit', edit_post1_path(@post1) %> |

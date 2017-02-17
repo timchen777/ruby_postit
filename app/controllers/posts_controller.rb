@@ -11,6 +11,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+      #------ Tim: add following 3 lines to apply posts to comments
+    @pst = Post.find(params[:id])
+    @pst_comments= @pst.comments
   end
 
   # GET /posts/new
