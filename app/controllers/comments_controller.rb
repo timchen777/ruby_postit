@@ -5,9 +5,8 @@ class CommentsController < ApplicationController
   # GET /comments.json
   def index
     # @comments = Comment.all
-    @comments = Comment.paginate(page: params[:page], per_page: 2)     
+    @comments = Comment.paginate(page: params[:page], per_page: 2)    
   end
-
   # GET /comments/1
   # GET /comments/1.json
   def show
@@ -70,6 +69,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:content, :post_id, :post1_id )
+      params.require(:comment).permit(:content, :post_id, :post1_id, :user_id)
     end
 end

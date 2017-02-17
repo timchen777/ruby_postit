@@ -22,13 +22,11 @@
 
 <!-----Tim Apply post to comment-->
 <!--% if logged_in? %-->
-  <!--% @pst1_comments.each do |comment| %-->
-    <!--p><!--%= current_user.name %><!--%= ":" %><!--%= link_to comment.content, comment %></p-->
-    <!--p>------------</p-->
-  <!--% end %-->
-
-<%= link_to 'New Comment', new_comment_path(@post1) %>
+  <% @pst1_comments.each do |comment| %>
+    <p>------------------------------</p>
+    <p><%= current_user.name %><%= ":" %><%= link_to comment.content, comment %></p>
+  <% end %>
 <hr>
-
+<%= link_to 'New Comment', new_comment_path(@post1), class: "btn btn-success" %><br>
 <%= link_to 'Edit', edit_post1_path(@post1) %> |
 <%= link_to 'Back', post1s_path %>

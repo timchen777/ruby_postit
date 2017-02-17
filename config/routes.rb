@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :comments
   resources :post1s
   # get 'pages/contact'
   get "contact", to: "pages#contact"
@@ -12,16 +13,17 @@ Rails.application.routes.draw do
   get "ref5", to: redirect("https://thoughtbot.com/upcase/rails")
   get "ref6", to: redirect("http://guides.rubyonrails.org/")
   get "ref7", to: redirect("http://learn-rails.com/")
-  get "ref8", to: redirect("http://learn-rails.com/")
+  get "ref8", to: redirect("http://www.theodinproject.com/")
   # get "ref8", to: redirect("https://drive.google.com/file/d/0B6S6WKwpSu8IRndCQWM0OGZWWDQ/view")
   get "ref9", to: redirect("https://github.com/eliotsykes/rspec-rails-examples")
   get "ref10", to: redirect("http://awesome-ruby.com/")
-  get "ref11", to: redirect("https://rvm.io/")
-  get "ref12", to: redirect("https://github.com/rbenv/rbenv#readme")
-  get "ref13", to: redirect("https://www.udemy.com/courses/")
-  get "ref14", to: redirect("https://www.skillshare.com/home")
-  get "ref15", to: redirect("https://www.codecademy.com/learn/all")
-  get "ref16", to: redirect("https://www.freecodecamp.com/")
+  get "ref11", to: redirect("https://github.com/ekremkaraca/awesome-rails")
+  get "ref12", to: redirect("https://rvm.io/")
+  get "ref13", to: redirect("https://github.com/rbenv/rbenv#readme")
+  get "ref14", to: redirect("https://www.udemy.com/courses/")
+  get "ref15", to: redirect("https://www.skillshare.com/home")
+  get "ref16", to: redirect("https://www.codecademy.com/learn/all")
+  get "ref17", to: redirect("https://www.freecodecamp.com/")
   get "ref101", to: redirect("https://www.python.org/")            
   # get 'pages/about'
   get "about", to: "pages#about"
@@ -77,8 +79,7 @@ Rails.application.routes.draw do
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
-  #     resources :comments
-  #     resources :sales do
+  #     #     resources :sales do
   #       get 'recent', on: :collection
   #     end
   #   end

@@ -18,8 +18,8 @@
     <p><%= current_user.name %><%= ":" %><%= link_to comment.content, comment %></p>
     <p>------------</p>
   <% end %>
-
-<%= link_to 'New Comment', new_comment_path(@post) %>
 <hr>
+<%= link_to 'New Comment', new_comment_path(@post), class: "btn btn-success" %><br>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
