@@ -2,7 +2,7 @@
 
 <h4>Categories</h4>
 <% if logged_in? %>
-<% if current_user.name == "admin"%>
+<!--% if current_user.name == "admin"%>-->
 <table>
   <thead>
     <tr>
@@ -15,11 +15,11 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.title %></td>
-        <td><%= link_to 'Show', category %></td>
+        <td><%= link_to 'Show', category,class: "btn btn-success" %></td>
         <% if logged_in? %>
           <% if current_user.name == "admin" %>
-            <td><%= link_to 'Edit', edit_category_path(category) %></td>
-            <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Edit', edit_category_path(category), class: "btn btn-warning" %></td>
+            <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
           <% end %>  
         <% end %>  
       </tr>
@@ -30,18 +30,11 @@
 <div>
   <%= will_paginate %>
 </div>  
+<hr>
 <% if logged_in? %>
-<%= link_to 'New Category', new_category_path, class: "btn btn-success" %>
+  <% if current_user.name == "admin" %>
+    <%= link_to 'New Category', new_category_path, class: "btn btn-success" %>
+  <% end %>
 <% end %>
 
-<% else %>
-  <ul>
-  <% @categories.each do |cat| %>
-    <li><%= link_to cat.title, cat %></li>
-  <% end %>
-  </ul>
-  <div>
-    <%= will_paginate %>
-  </div>    
-<% end %>
 <% end %>

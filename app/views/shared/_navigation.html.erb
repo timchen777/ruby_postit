@@ -21,7 +21,8 @@
         <li><%= link_to  "Contact", contact_path %></li>        
 <% if logged_in? %>   
 <!--% if current_user.name != "admin"% -->
-        <li><%= link_to  "Browse", categories_path %></li>
+        <li><%= link_to  "Category", categories_path %></li>
+        <li><%= link_to  "Post", post1s_path %></li>        
 <!--% end % -->
 <% end %>
       </ul>
@@ -37,7 +38,7 @@
         <!--<li><a href="#">Link</a></li>-->
         <!--li><!--%= link_to  "railscasts.com", ref1_path %></li-->
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">References <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Developer<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%= link_to  "http://railscasts.com", ref1_path %></li>
             <li><%= link_to  "https://gorails.com", ref2_path %></li>
@@ -60,6 +61,21 @@
             <li><%= link_to  "https://www.freecodecamp.com/", ref17_path %></li>
             <li role="separator" class="divider"></li>
             <li><%= link_to  "https://www.python.org/", ref101_path %></li>
+            <li><%= link_to  "https://simpleprogrammer.com/2017/02/15/get-started-learning-python/", ref102_path %></li>
+            <li><%= link_to  "https://realpython.com/", ref103_path %></li>
+            <li><%= link_to  "https://training.talkpython.fm/courses/explore_python_jumpstart/", ref104_path %></li>
+            <li><%= link_to  "https://learnpythonthehardway.org/book/", ref105_path %></li>
+            <li><%= link_to  "https://www.codecademy.com/learn/python", ref106_path %></li>
+            <li><%= link_to  "https://www.codeschool.com/learn/python", ref107_path %></li>
+            <li><%= link_to  "https://training.talkpython.fm/courses/explore_entrepreneurs/", ref108_path %></li>
+            <li><%= link_to  "https://www.datacamp.com/courses/intro-to-python-for-data-science", ref109_path %></li>
+            <li><%= link_to  "https://www.amazon.com/gp/product/1449355730", ref110_path %></li>
+            <li><%= link_to  "https://www.amazon.com/exec/obidos/ASIN/1593275994/makithecompsi-20", ref111_path %></li>          
+            <li><%= link_to  "https://www.udemy.com/learning-python-not-the-snake/learn/v4/overview", ref112_path %></li>  
+            <li><%= link_to  "https://www.pyimagesearch.com/practical-python-opencv/", ref113_path %></li>  
+            <li><%= link_to  "https://www.pythonanywhere.com/", ref114_path %></li>  
+            <li><%= link_to  "https://simpleprogrammer.com/2017/01/18/7-reasons-why-you-should-learn-python/", ref115_path %></li>  
+            <!--<li><!--%= link_to  "", ref116_path %></li>  -->
           </ul>
         </li>
         <li class="dropdown">

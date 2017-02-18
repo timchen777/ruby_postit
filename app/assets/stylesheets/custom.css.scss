@@ -16,3 +16,16 @@ $navbar-default-bg: #05055A;
    color: #fff;
    text-decoration: none;
 }
+
+.title_class {
+    background-color: lightgrey;
+    width: 300px;
+}
+
+
+thead {color:green;}
+tbody {color:blue;}
+tfoot {color:red;}
+table, th, td {
+    border: 1px solid black;
+}

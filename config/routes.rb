@@ -25,6 +25,22 @@ Rails.application.routes.draw do
   get "ref16", to: redirect("https://www.codecademy.com/learn/all")
   get "ref17", to: redirect("https://www.freecodecamp.com/")
   get "ref101", to: redirect("https://www.python.org/")            
+  get "ref102", to: redirect("https://simpleprogrammer.com/2017/02/15/get-started-learning-python/")            
+  get "ref103", to: redirect("https://realpython.com/")            
+  get "ref104", to: redirect("https://training.talkpython.fm/courses/explore_python_jumpstart/python-language-jumpstart-building-10-apps")            
+  get "ref105", to: redirect("https://learnpythonthehardway.org/book/")            
+  get "ref106", to: redirect("https://www.codecademy.com/learn/python")            
+  get "ref107", to: redirect("https://www.codeschool.com/learn/python")            
+  get "ref108", to: redirect("https://training.talkpython.fm/courses/explore_entrepreneurs/python-for-entrepreneurs-build-and-launch-your-online-business")            
+  get "ref109", to: redirect("https://www.datacamp.com/courses/intro-to-python-for-data-science")            
+  get "ref110", to: redirect("https://www.amazon.com/gp/product/1449355730/ref=as_li_ss_tl?ie=UTF8&linkCode=sl1&tag=trndingcom-20&linkId=963e5708fd96380e4d706d280dd8f477")            
+  get "ref111", to: redirect("https://www.amazon.com/exec/obidos/ASIN/1593275994/makithecompsi-20")            
+  get "ref112", to: redirect("https://www.udemy.com/learning-python-not-the-snake/learn/v4/overview")  
+  get "ref113", to: redirect("https://www.pyimagesearch.com/practical-python-opencv/") 
+  get "ref114", to: redirect("https://www.pythonanywhere.com/") 
+  get "ref115", to: redirect("https://simpleprogrammer.com/2017/01/18/7-reasons-why-you-should-learn-python/") 
+  # get "ref116", to: redirect("") 
+
   # get 'pages/about'
   get "about", to: "pages#about"
 
