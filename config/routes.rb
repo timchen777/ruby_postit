@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "contact", to: "pages#contact"
   get "error", to: "pages#error"
   
+  get "ref0", to: redirect("http://edgeguides.rubyonrails.org/")
   get "ref1", to: redirect("http://railscasts.com")
   get "ref2", to: redirect("https://gorails.com")
   get "ref3", to: redirect("https://railstutorial.org")
@@ -58,7 +59,8 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
   
-  get "*path", to: redirect("/error")
+  # We need this "https://rubyws-timchen7.c9users.io/rails/info/routes"
+  # so, dont do this : get "*path", to: redirect("/error")
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
